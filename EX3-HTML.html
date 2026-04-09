@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Shinchan Fan Page (Programming 4)</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:"Segoe UI",Roboto,sans-serif;
+    background:#fef2e4;
+    color:#2c2b28;
+    line-height:1.5;
+    padding:1.25rem .75rem}
+    .wrap{max-width:1100px;
+        margin:0 auto;
+        background:#fffaf2;
+        border-radius:24px;
+        padding:1.2rem;
+        overflow:hidden}
+    .headline,.pill{text-align:center;
+        background:#ffeedb;
+        color:#c2491f;
+        border:1px solid #ffd9ae;
+        border-radius:999px}
+    .headline{font-weight:600;
+        padding:.7rem;
+        margin-bottom:1rem}
+    h1{font-size:2rem;text-align:center;color:#d94a1a;margin:.5rem 0 .35rem}
+    h2{font-size:1.5rem;color:#3b2a1f;border-left:6px solid #e25822;
+        padding-left:.7rem;margin:1.6rem 0 1rem}
+    h3{font-size:1.2rem;color:#c4451b;margin:1rem 0 .8rem}
+    .pill{display:inline-block;padding:.4rem 1rem;background:#fff0df;
+        margin:0 auto 1rem;min-width:220px}
+    .center{display:flex;justify-content:center}
+    .panel{background:#faf0e4;border:1px solid #ffd9ae;border-radius:16px;
+        padding:.9rem;margin:1rem 0;text-align:center}
+    img,video{max-width:100%;display:block}
+    .hero img,.poster img,.gif img,.panel video{border-radius:14px;border:1px solid #ffd9ae}
+    .hero{margin-bottom:1rem}
+    .poster,.gif{margin:1rem 0}
+    .grid{display:grid;gap:.9rem}
+    .grid.main{grid-template-columns:repeat(3,1fr)}
+    .grid.extra{grid-template-columns:repeat(4,1fr);margin-top:.9rem}
+    .card{background:#fff;border:1px solid #ffe0bc;border-radius:
+        16px;padding:.8rem;text-align:center}
+    .card:hover{border-color:#e25822;background:#fffaf5}
+    .avatar{width:96px;height:96px;margin:0 auto .6rem;
+        border-radius:50%;overflow:hidden;background:#faeedf;border:2px solid #ffcf99}
+    .name{font-weight:700;color:#c4451b;margin:.3rem 0}
+    .desc{font-size:.9rem;color:#5c4a34}
+    form{margin-top:.4rem}
+    .row{display:flex;flex-wrap:wrap;
+        gap:.6rem;margin-bottom:.9rem}
+    .row>label{width:210px;font-weight:600;color:#4f381f}
+    input,textarea{flex:1;min-width:220px;
+        border:1px solid #f1d5ae;
+        background:#fffef9;border-radius:999px;padding:.6rem .9rem;
+        font:inherit}
+    textarea{border-radius:14px;resize:vertical}
+    .radio{display:flex;flex-wrap:wrap;gap:1rem;align-items:center}
+    .radio label{width:auto;font-weight:400;display:inline-flex;
+        align-items:center;gap:.35rem}
+    .hint{font-size:.75rem;color:#8b694a}
+    button{background:#e25822;color:#fff;border:none;border-radius:999px;
+        padding:.65rem 1.6rem;font-weight:700;cursor:pointer;min-width:220px}
+    button:hover{background:#b5421a}
+    hr{border:none;height:2px;background:#ffe0bb;margin:.6rem 0 1rem}
+    footer{margin-top:1.6rem;padding-top:1rem;border-top:2px dashed #ffd9ae;
+        text-align:center;font-size:.9rem;color:#9b7a5c}
+    footer a{color:#e25822;text-decoration:none} footer a:hover{text-decoration:underline}
+    @media (max-width:900px){.grid.main{grid-template-columns:repeat(2,1fr)}.grid.extra{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:640px){h1{font-size:1.6rem}.row>label{width:100%}.radio{flex-direction:column;align-items:flex-start;gap:.45rem}
+    .grid.main,.grid.extra{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="headline">Shinchan: Shiro and the Coal Town - Character Introduction + Mini Survey</div>
+
+    <header>
+      <div class="hero"><img src="assets/shin-chan-banner.jpg" alt="Shinchan Banner" onerror="this.src='https://placehold.co/1200x300?text=Shinchan+Banner'"></div>
+      <h1>Shinchan Fan Page</h1>
+      <div class="center"><span class="pill">Platform: Nintendo Switch / Windows PC</span></div>
+      <div class="poster center"><img src="assets/shinchan-coal-town-poster.jpg" alt="Shinchan Coal Town Poster" onerror="this.src='https://placehold.co/600x300?text=Game+Poster'"></div>
+    </header>
+    <section class="panel">
+      <video controls poster="assets/shinchan-coal-town-poster.jpg">
+        <source src="assets/shinchan-and-the-coal-town.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p class="hint" style="margin-top:.45rem">Trailer clip (for class demo)</p>
+    </section>
+    <section>
+      <h2>Main Characters</h2>
+      <div class="grid main">
+        <article class="card">
+          <div class="avatar"><img src="assets/character-shinchan.png" alt="Shinchan"></div>
+          <p class="name">Shinnosuke Nohara (Shinchan)</p>
+          <p class="desc">A funny 5-year-old kid. He is naughty but very kind sometimes.</p>
+        </article>
+        <article class="card">
+          <div class="avatar"><img src="assets/character-misae.webp" alt="Misae Nohara"></div>
+          <p class="name">Misae Nohara (Mom)</p>
+          <p class="desc">Shinchan's mom. She often gets angry, but she cares a lot about family.</p>
+        </article>
+        <article class="card">
+          <div class="avatar"><img src="assets/character-hiroshi.webp" alt="Hiroshi Nohara"></div>
+          <p class="name">Hiroshi Nohara (Dad)</p>
+          <p class="desc">Shinchan's father. He works in an office and likes relaxing after work.</p>
+        </article>
+      </div>
+      <div class="grid extra">
+        <article class="card">
+          <div class="avatar"><img src="assets/character-himawari.png" alt="Himawari"></div>
+          <p class="name">Himawari (Sister)</p>
+          <p class="desc">The baby sister. She likes shiny things and cute stuff.</p>
+        </article>
+        <article class="card">
+          <div class="avatar"><img src="assets/character-shiro.png" alt="Shiro"></div>
+          <p class="name">Shiro (Nohara family dog)</p>
+          <p class="desc">The family dog. Looks small but is smart and loyal.</p>
+        </article>
+        <article class="card">
+          <div class="avatar"><img src="assets/character-toru-kazama.webp" alt="Toru Kazama"></div>
+          <p class="name">Toru Kazama</p>
+          <p class="desc">A smart friend who is serious most of the time.</p>
+        </article>
+        <article class="card">
+          <div class="avatar"><img src="assets/character-masao-sato.webp" alt="Masao Sato"></div>
+          <p class="name">Masao Sato</p>
+          <p class="desc">A shy but good friend. He is easy to scare but very friendly.</p>
+        </article>
+      </div>
+    </section>
+    <div class="gif center"><img src="assets/shinchan.gif" alt="Shinchan funny animation"></div>
+    <section>
+      <h2>Who is your favorite?</h2>
+      <form action="#" method="post">
+        <div class="row">
+          <label>Choose your favorite character:</label>
+          <div class="radio">
+            <label><input type="radio" name="fav_character" value="Shinchan"> Shinchan</label>
+            <label><input type="radio" name="fav_character" value="Misae"> Misae (Mom)</label>
+            <label><input type="radio" name="fav_character" value="Hiroshi"> Hiroshi (Dad)</label>
+            <label><input type="radio" name="fav_character" value="Himawari"> Himawari</label>
+            <label><input type="radio" name="fav_character" value="Shiro"> Shiro</label>
+            <label><input type="radio" name="fav_character" value="Kazama"> Toru Kazama</label>
+            <label><input type="radio" name="fav_character" value="Masao"> Masao Sato</label>
+          </div>
+        </div>
+        <div class="row">
+          <label for="other_character">If not listed, type another character name:</label>
+          <input type="text" id="other_character" name="other_character" placeholder="e.g., Ai Suotome, Principal">
+        </div>
+        <div class="row">
+          <label for="like_reason">Why do you like this character?</label>
+          <textarea id="like_reason" rows="2" name="like_reason" placeholder="Write 1-2 lines"></textarea>
+        </div>
+
+        <hr>
+        <h3>About You</h3>
+
+        <div class="row">
+          <label for="username">Your Name:</label>
+          <input id="username" type="text" name="username" placeholder="Enter your name" required>
+        </div>
+        <div class="row">
+          <label>Your Gender:</label>
+          <div class="radio">
+            <label><input type="radio" name="gender" value="Male"> Male</label>
+            <label><input type="radio" name="gender" value="Female"> Female</label>
+          </div>
+        </div>
+        <div class="row">
+          <label for="dob">Date of Birth:</label>
+          <input id="dob" type="text" name="dob" placeholder="dd.mm.yyyy" pattern="\d{2}\.\d{2}\.\d{4}" title="Format: dd.mm.yyyy">
+          <span class="hint">Example: 01.08.2005</span>
+        </div>
+        <div class="row">
+          <label for="email">Your Email:</label>
+          <input id="email" type="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="center"><button type="submit">Submit</button></div>
+      </form>
+    </section>
+
+    <footer>
+      <p>2026 Programming4 Assignment - Fan Page</p>
+      <p>Contact: <a href="mailto:shinchan-lovers@justlearninghtml.com">shinchan-lovers@justlearninghtml.com</a></p>
+      <p class="hint">For learning purpose only. No commercial use.</p>
+    </footer>
+  </div>
+</body>
+</html>
